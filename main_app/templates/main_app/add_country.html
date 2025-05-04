@@ -1,0 +1,29 @@
+{% extends 'base.html' %}  <!-- If you have a base template -->
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Add New Country</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.name.label_tag }}
+            {{ form.name }}
+            {% if form.name.errors %}
+                <div class="alert alert-danger">{{ form.name.errors }}</div>
+            {% endif %}
+        </div>
+        
+        <div class="form-group">
+            {{ form.code.label_tag }}
+            {{ form.code }}
+            <small class="form-text text-muted">Use 2-letter ISO country code (e.g., US, GB, FR)</small>
+            {% if form.code.errors %}
+                <div class="alert alert-danger">{{ form.code.errors }}</div>
+            {% endif %}
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Save Country</button>
+        <a href="{% url 'language_index' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

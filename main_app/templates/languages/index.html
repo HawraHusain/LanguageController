@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/cats/cat-index.css' %}" /> -->
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>Languages</h1>
+  <a href="{% url 'language_create' %}" class="btn btn-primary">
+    <i class="fas fa-plus"></i> Add New Language
+  </a>
+
+</section>
+
+<section class="card-container">
+  {% for language in languages %}
+  <div class="card">
+    <div class="card-content">
+      <div class="card-img-container">
+      </div>
+      <a href="{% url 'language_detail' language.code %}">{{ language.name }}</a>
+      (<a href="{% url 'language_update' language.code %}">edit</a> | 
+      <a href="{% url 'language_delete' language.code %}">delete</a>)
+      <p>Code: <strong>{{ language.code }}</strong></p>
+      <p>
+        Spoken in:
+        {% for country in language.countries.all %}
+          {{ country.name }}{% if not forloop.last %}, {% endif %}
+        {% empty %}
+          <em>No countries listed</em>
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}

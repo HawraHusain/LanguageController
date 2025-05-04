@@ -1,0 +1,58 @@
+/* static/css/base.css  */
+
+body {
+    background-color: #FFA1C6;
+  }
+  .header-logo-container a img {
+width: 15%;
+height: auto;
+margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid #F5E9E5;
+    display: flex;
+  }
+  
+  nav {
+    margin: 30px;
+  }
+  
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  
+  main {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #F5E9E5;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  nav a:hover {
+    color: #7C2F32;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav li {
+    padding: 5px 8px;
+  }

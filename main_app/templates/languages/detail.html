@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<!-- Add your CSS if needed -->
+{% endblock %} 
+
+{% block content %}
+<section class="language-container">
+  <div class="language-details">
+    <a href="" class="btn btn-secondary">Edit</a>
+    <h1>{{ language.name }}</h1>
+    <h2>Code: {{ language.code }}</h2>
+
+    <p>
+        Spoken in:
+        {% for country in language.countries.all %}
+          {{ country.name }}{% if not forloop.last %}, {% endif %}
+        {% empty %}
+          <em>No countries listed</em>
+        {% endfor %}
+    </p>
+    
+    <a href="{% url 'word_create' language.code %}" class="btn btn-primary">Add New Word</a>
+    
+    <h3>Words:</h3>
+    <ul>
+        {% for word in language.words.all %}
+          <li>
+            {{ word.word }} – {{ word.meaning }}
+            <a href="{% url 'word_update' word.pk %}" class="btn btn-sm btn-secondary">Edit</a>
+            <a href="{% url 'word_delete' word.pk %}" class="btn btn-sm btn-danger">Delete</a>
+          </li>
+        {% empty %}
+          <li>No words added for this language.</li>
+        {% endfor %}
+      </ul>
+  </div>
+</section>
+{% endblock %}
