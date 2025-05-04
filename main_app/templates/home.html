@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if not user.is_authenticated %}
+<div class="text-center mt-5">
+    <h2>Welcome to Language Collector</h2>
+    <p>Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'signup' %}">sign up</a> to continue.</p>
+</div>
+{% else %}
+<div class="text-center mt-5">
+    <h2>Welcome back, {{ user.username }}!</h2>
+    <p>Go to your <a href="{% url 'profile' %}">profile</a> or explore <a href="{% url 'language_index' %}">languages</a>.</p>
+</div>
+{% endif %}
+{% endblock %}

@@ -8,11 +8,15 @@ from .models import Language, Word,Country
 from django.http import HttpResponse
 from django.views.generic import CreateView, UpdateView, DeleteView , ListView
 from django.shortcuts import get_object_or_404
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+
 
 # Define the home view function
 def home(request):
     # Send a simple HTML response
-    return HttpResponse('<h1>Hello</h1>')
+    return render(request, 'home.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -103,3 +107,19 @@ class WordDelete(LoginRequiredMixin, DeleteView):
     
     def get_success_url(self):
         return reverse('language_detail', kwargs={'code': self.object.language.code})
+    
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('profile')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})
+
+@login_required
+def profile(request):
+    return render(request, 'registration/profile.html')
