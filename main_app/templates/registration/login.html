@@ -1,22 +1,28 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/login.css' %}"
+/>
+{% endblock %}
 {% block content %}
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title text-center mb-4">Login</h2>
+                    <div class="LoginPage" style="background-image: url('{% static 'css/images/Login.png' %}');">
                     <form method="post">
+                        <h2 class="text-center">Login</h2>
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <button type="submit" class="btn btn-primary w-100 loginbutton">Login</button>
+                        <div class="text-center mt-3">
+                            <h3>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></h3>
+                        </div>
                     </form>
-                    <div class="text-center mt-3">
-                        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
-                    </div>
+                    
                 </div>
-            </div>
+
         </div>
     </div>
 </div>
