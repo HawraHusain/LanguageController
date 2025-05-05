@@ -1,0 +1,56 @@
+.deleteconfirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: #D54F49;
+}
+button.saveButton {
+    color: black;
+    background-color: #D54F49;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #D54F49;
+    border-radius: 5px;
+    width: 100px;
+}
+button.saveButton:hover {
+    background-color: #D54F49;
+    color: white;
+    text-decoration: none;
+}
+a.cancelbutton{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #EEBF4B;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+a.cancelbutton:hover {
+    background-color: #EEBF4B;
+    color: white;
+    text-decoration: none;
+}
+body{
+    background-image: url(../css/images/languagebk.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+h2{
+    justify-content: center;
+    display: grid;
+}
+.card-urls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

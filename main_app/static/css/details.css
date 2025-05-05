@@ -1,0 +1,115 @@
+body{
+    background-image: url(../css/images/detailsbk.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.language-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .language-details {
+    background-color: #f9f9f9;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .language-details h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+    color: #446889;
+    text-transform: uppercase;
+  }
+  
+  .language-details h2,
+  .language-details h3 {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  .language-details p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  .language-details ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .language-details li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  
+  .language-details li:last-child {
+    border-bottom: none;
+  }
+  
+  .language-details .btn {
+    margin: 0 5px;
+  }
+  
+  .btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-sm {
+    padding: 4px 8px;
+    font-size: 0.8em;
+  }
+  .editbutton a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #EEBF4B;
+    border-radius: 5px;
+}
+
+.deletebutton li {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #D54F49;
+    border-radius: 5px;
+}
+
+.editbutton a:hover {
+    background-color: #EEBF4B;
+    color: white;
+    text-decoration: none;
+}
+
+.deletebutton a:hover {
+    background-color: #D54F49;
+    color: white;
+    text-decoration: none;
+}

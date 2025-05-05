@@ -1,0 +1,51 @@
+body {
+    background-image: url(../css/images/wordBk.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2 {
+    justify-content: center;
+    display: flex;
+}
+/* Vocabulary Table Styles */
+.table-vocab {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-vocab thead {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.table-vocab th, .table-vocab td {
+    padding: 12px 16px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-vocab tbody tr {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.table-vocab tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-vocab td a.btn {
+    margin-right: 6px;
+}
+main{
+    padding: 0px 0px !important;
+}
+.table-vocab th{
+color: #9BB69A;
+}
+.table-vocab td{
+ color: #446889;
+}

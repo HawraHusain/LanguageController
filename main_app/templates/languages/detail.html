@@ -1,14 +1,15 @@
 {% extends 'base.html' %} 
-{% load static %} 
-
+{% load static %}
 {% block head %}
-<!-- Add your CSS if needed -->
-{% endblock %} 
+<link
+  rel="stylesheet"
+  href="{% static 'css/details.css' %}"
+/>
+{% endblock %}
 
 {% block content %}
 <section class="language-container">
   <div class="language-details">
-    <a href="" class="btn btn-secondary">Edit</a>
     <h1>{{ language.name }}</h1>
     <h2>Code: {{ language.code }}</h2>
 
@@ -28,8 +29,8 @@
         {% for word in language.words.all %}
           <li>
             {{ word.word }} – {{ word.meaning }}
-            <a href="{% url 'word_update' word.pk %}" class="btn btn-sm btn-secondary">Edit</a>
-            <a href="{% url 'word_delete' word.pk %}" class="btn btn-sm btn-danger">Delete</a>
+            <a href="{% url 'word_update' word.pk %}" class="editbutton">Edit</a>
+            <a href="{% url 'word_delete' word.pk %}" class="deletebutton">Delete</a>
           </li>
         {% empty %}
           <li>No words added for this language.</li>

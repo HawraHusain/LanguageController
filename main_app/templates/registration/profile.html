@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/profile.css' %}"
+/>
+{% endblock %}
 {% block content %}
 <h2>Profile</h2>
 <p>Welcome, {{ user.username }}!</p>
-<a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
 {% endblock %}

@@ -24,17 +24,19 @@
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'language_index' %}">All Languages</a></li>
                 <li><a href="{% url 'add_country' %}">Add New Country</a></li>
+                <li><a href="{% url 'word_index' %}">All Words</a></li>
                 <form action="{% url 'logout' %}" method="post" style="display: inline;">
                   {% csrf_token %}
                   <button type="submit" class="btn-link">Logout</button>
-              </form>                {% else %}
+                </form>
+            {% else %}
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'signup' %}">Sign Up</a></li>
                 <li><a href="{% url 'word_index' %}">All Words</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
             {% endif %}
         </ul>
-    </nav>
+      </nav>
     </header>
     <main>
      {% block content %} 

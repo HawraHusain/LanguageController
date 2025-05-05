@@ -1,0 +1,182 @@
+body {
+    background-image: url(../css/images/languagebk.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+h1 {
+    color: #518554;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.addlanguage {
+    margin-bottom: 50px;
+}
+
+.addlanguage a {
+    color: #518554;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #518554;
+    border-radius: 5px;
+}
+
+.addlanguage a:hover {
+    background-color: #518554;
+    color: white;
+}
+
+.card-container {
+    width: 50%;
+    margin-left: 21rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 15px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-content a {
+    color: #336699;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+.card-content p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.card-content strong {
+    font-weight: bold;
+    color: #222;
+}
+
+.card-content em {
+    color: #888;
+    font-style: italic;
+}
+
+.editbutton a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #EEBF4B;
+    border-radius: 5px;
+}
+
+.deletebutton a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #D54F49;
+    border-radius: 5px;
+}
+
+.editbutton a:hover {
+    background-color: #EEBF4B;
+    color: white;
+    text-decoration: none;
+}
+
+.deletebutton a:hover {
+    background-color: #D54F49;
+    color: white;
+    text-decoration: none;
+
+}
+
+.card-urls {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.card-urls-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+form {
+    border: 4px solid #518554;
+    width: 30%;
+    justify-content: center;
+    display: grid;
+}
+label{
+    font-size: 20px;
+}
+input[type="text"] {
+    width: 88%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+}
+.form-group{
+    padding: 10px;
+
+}
+h2{
+    justify-content: center;
+    display: grid;
+}
+.editlanguage{
+    justify-content: center;
+    display: flex;
+}
+button.saveButton {
+    color: black;
+    background-color: #EEBF4B;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #EEBF4B;
+    border-radius: 5px;
+    width: 100px;
+}
+button.saveButton:hover {
+    background-color: #EEBF4B;
+    color: white;
+    text-decoration: none;
+}
+a.cancelbutton{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #D54F49;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+a.cancelbutton:hover {
+    background-color: #D54F49;
+    color: white;
+    text-decoration: none;
+}

@@ -1,29 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block head %}
-<!-- <link rel="stylesheet" href="{% static 'css/cats/cat-index.css' %}" /> -->
+<link
+  rel="stylesheet"
+  href="{% static 'css/language.css' %}"
+/>
 {% endblock %}
 
 {% block content %}
 
 <section class="page-header">
   <h1>Languages</h1>
-  <a href="{% url 'language_create' %}" class="btn btn-primary">
-    <i class="fas fa-plus"></i> Add New Language
+  <div class="addlanguage">
+  <a href="{% url 'language_create' %}" >
+   + Add New Language
   </a>
-
+</div>
 </section>
 
 <section class="card-container">
   {% for language in languages %}
   <div class="card">
     <div class="card-content">
-      <div class="card-img-container">
-      </div>
       <a href="{% url 'language_detail' language.code %}">{{ language.name }}</a>
-      (<a href="{% url 'language_update' language.code %}">edit</a> | 
-      <a href="{% url 'language_delete' language.code %}">delete</a>)
       <p>Code: <strong>{{ language.code }}</strong></p>
       <p>
         Spoken in:
@@ -33,6 +32,14 @@
           <em>No countries listed</em>
         {% endfor %}
       </p>
+      <div class="card-urls">
+      <div class="editbutton">
+      <a href="{% url 'language_update' language.code %}">Edit</a>
+      </div>
+      <div class="deletebutton">
+      <a href="{% url 'language_delete' language.code %}">Delete</a>
+      </div>
+    </div>
     </div>
   </div>
   {% endfor %}
