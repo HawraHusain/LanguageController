@@ -27,7 +27,7 @@ ul {
   margin: 0;
   list-style: none;
   padding: 0 70px !important;
-  /* display: flex; */
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
