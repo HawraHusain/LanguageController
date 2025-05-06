@@ -1,70 +1,64 @@
 # 🌍 Language Collector
 
-A Django web application for language enthusiasts to collect and organize vocabulary words across multiple languages.
+A Django-based web app designed for language enthusiasts to collect, organize, and manage vocabulary across different languages.
 
-![Dashboard Screenshot](static/images/screenshot.png)
 
-## ✨ Features
+![Dashboard Screenshot](/main_app/static/css/images/dashboardScreen.png)
 
-### Core Features
-- **User Authentication**: Secure signup/login with profile management
-- **Language Tracking**: Add/Edit/Delete languages with country associations
-- **Vocabulary Builder**: Store and organize words with translations
-- **Country Mapping**: Associate languages with countries where they're spoken
+## Getting Started
 
-### Stretch Features
-- 🃏 Interactive flashcards for vocabulary practice
-- 📊 Learning progress dashboard with troll motivation
-- 🎤 Audio pronunciation recording (Web Audio API)
-- 🏆 Gamification with badges and achievements
-- 🔍 Advanced search and filtering
+### 🖥️ Visit the Website
 
-## 🛠️ Tech Stack
+[Language Controller](https://hawrahusain.github.io/Memory-Game/)
 
-**Backend:**
-- Python 3.9+
-- Django 4.0+
-- PostgreSQL/MySQL
+## Planning Materials 
 
-**Frontend:**
-- HTML5, CSS3, JavaScript
-- Bootstrap 5
-- Chart.js (for visualizations)
+[View Planning Document](https://trello.com/b/RgMXlqyE/language-controller)
 
-**DevOps:**
-- Docker
-- GitHub Actions (CI/CD)
-- Heroku/AWS (Deployment)
+## Attributuions 
 
-## 📦 Installation
+- [Backgrounds](https://www.canva.com)
 
-### Prerequisites
-- Python 3.9+
-- PostgreSQL
-- Virtualenv
+## Technologies Used
 
-### Setup
-```bash
-# Clone repository
-git clone https://github.com/yourusername/language-collector.git
-cd language-collector
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+## How is working 
+### 1. 👩🏼‍💻 As User
 
-# Install dependencies
-pip install -r requirements.txt
+- Users can add, update, and remove languages.
+- Easy navigation through header buttons.
+- Option to add vocabulary for each language.
+- Personalized welcome message after login.
 
-# Configure environment variables
-cp .env.example .env
-# Edit .env with your credentials
+![User Screen](/main_app/static/css/images/profilescreen.png)
 
-# Run migrations
-python manage.py migrate
+### 2. 🌏 Country Management
+- Users can create, edit, or delete countries.
+- Once a country is added, it can be selected when editing languages.
 
-# Create superuser
-python manage.py createsuperuser
+![Country Screen](/main_app/static/css/images/addWordScreen.png)
 
-# Run development server
-python manage.py runserver
+### 3. 🔠 Word Management
+- Users can add, edit, or remove words along with their meanings.
+- Other users can view words to learn more.
+- Users must be logged in to edit or delete words; the action buttons will be hidden otherwise.
+
+![Word Screen](/main_app/static/css/images/WordScreen.png)
+
+### 4. 💬 Language Management
+- Users can edit, delete, or add new languages.
+- Access to this feature requires the user to be logged in.
+- Users can view the page by clicking "All Languages" in the header.
+
+![Language Screen](/main_app/static/css/images/languageScreen.png)
+
+## Future Improvements 
+- Add images to words.
+- Allow users to set words as private (visible only to themselves) or public.
+
+
+
